@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./context/ThemeContext";
 import ThemeToggle from "./components/ThemeToggle";
+import { Analytics } from "@vercel/analytics/react";
 
 const geistSans = Geist({
   subsets: ["latin"],
@@ -35,6 +36,7 @@ export default function RootLayout({
               <ThemeToggle />
             </div>
             {children}
+            <Analytics />
           </div>
         </ThemeProvider>
       </body>
