@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+:root {
+  /* Variables pour le mode clair */
+  --background: #f9fafb;
+  --foreground: #171717;
+  --card-bg: #ffffff;
+  --card-border: #eaecef;
+  --card-hover: #f5f5f5;
+  --primary: #3b82f6;
+  --primary-dark: #2563eb;
+  --primary-light: #60a5fa;
+  --secondary: #10b981;
+  --secondary-light: #34d399;
+  --secondary-dark: #059669;
+  --text-muted: #6b7280;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Variables pour le mode sombre */
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --card-bg: #1a1a1a;
+    --card-border: #2a2a2a;
+    --card-hover: #2c2c2c;
+    --primary: #3b82f6;
+    --primary-dark: #1d4ed8;
+    --primary-light: #93c5fd;
+    --secondary: #10b981;
+    --secondary-light: #6ee7b7;
+    --secondary-dark: #047857;
+    --text-muted: #9ca3af;
+  }
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --card-bg: #1a1a1a;
+  --card-border: #2a2a2a;
+  --card-hover: #2c2c2c;
+  --primary: #3b82f6;
+  --primary-dark: #1d4ed8;
+  --primary-light: #93c5fd;
+  --secondary: #10b981;
+  --secondary-light: #6ee7b7;
+  --secondary-dark: #047857;
+  --text-muted: #9ca3af;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans, Arial, Helvetica, sans-serif);
+}
+
+/* Form elements consistent styling */
+input:not([type="radio"]):not([type="checkbox"]),
+select,
+textarea {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+/* Classe spécifique pour les inputs avec icônes à gauche */
+.input-with-icon-left {
+  padding-left: 2.5rem !important;
+}
+
+button, [role="button"], .cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.bg-primary-dark {
+  background-color: var(--primary-dark);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.text-primary-light {
+  color: var(--primary-light);
+}
+
+.text-secondary {
+  color: var(--secondary);
+}
+
+.text-secondary-light {
+  color: var(--secondary-light);
+}
+
+/* Animation de transition */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+/* Style pour la scrollbar */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+.dark .scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #475569;
+}
